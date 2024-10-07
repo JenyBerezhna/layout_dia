@@ -6,14 +6,385 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Dia</title>
+    <title>Air</title>
+    <link
+      rel="icon"
+      href="./images/icons/favicon-32x32.png"
+      type="image/x-icon"
+    />
+
     <link
       rel="stylesheet"
-      href="./styles/main.scss"
+      href="./styles/entire.scss"
     />
   </head>
   <body>
-    <h1>Dia</h1>
     <script src="scripts/main.js"></script>
+
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <nav class="header__nav">
+            <a
+              href="#"
+              class="header__logo"
+            >
+              <img
+                src="./images/logo/Air.svg"
+                alt="Air-Logo"
+                class="logo"
+              />
+            </a>
+            <input
+              type="checkbox"
+              id="menu-checkbox"
+              class="header__menu-checkbox"
+            />
+            <label
+              for="menu-checkbox"
+              class="header__menu-icon"
+            >
+              <img
+                src="./images/icons/menu-humbg.png"
+                alt="menu-icon"
+                class="icon"
+              />
+            </label>
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a
+                  href="#home"
+                  class="header__menu-link"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a
+                  href="#about"
+                  class="header__menu-link"
+                >
+                  About
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a
+                  href="#services"
+                  class="header__menu-link"
+                >
+                  Services
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a
+                  href="#contact-us"
+                  class="header__menu-link"
+                >
+                  Contact us
+                </a>
+              </li>
+            </ul>
+
+            <button>
+              <a
+                href="#contact-us"
+                class="header__menu-link header__hire-us"
+              >
+                Hire Us
+              </a>
+            </button>
+          </nav>
+        </div>
+
+        <div class="strategic">
+          <section
+            class="strategic-agency"
+            id="home"
+          >
+            <h1 class="strategic-agency__title">Strategic Agency</h1>
+            <p class="strategic-agency__description">
+              We believe in the power of bold ideas that can solve business
+              challenges.
+            </p>
+            <a
+              href="#our-expertise"
+              class="strategic-agency__cta-button"
+            >
+              Learn More
+            </a>
+          </section>
+
+          <div class="black-container">
+            <div class="slider">
+              <img
+                src="./images/slider-watch.svg"
+                alt="Slider Image"
+                class="slider__image"
+              />
+              <div class="slider__content">
+                <div class="slider__text">
+                  <h2 class="slider__title">Intro</h2>
+                  <p class="slider__description">
+                    By the same illusion which lifts the horizon.
+                  </p>
+                </div>
+                <div class="slider__nav">
+                  <img
+                    src="./images/icons/Arrow left.png"
+                    alt="Previous"
+                    class="slider__icon slider__icon-left"
+                  />
+                  <img
+                    src="./images/icons/Arrow right.png"
+                    alt="Next"
+                    class="slider__icon slider__icon-right"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="main__content">
+          <section
+            id="about"
+            class="who-we-are"
+          >
+            <h2 class="who-we-are__title">Who We Are</h2>
+            <p class="who-we-are__description">
+              We embrace a strategic approach to creative ideas. We are
+              interested in people and human relationships. This is the main
+              thing you need to know about us. We believe in the power of bold
+              ideas that can solve business challenges.
+            </p>
+          </section>
+        </div>
+
+        <section
+          id="our-expertise"
+          class="our-expertise"
+        >
+          <h2 class="our-expertise__title">Our Expertise</h2>
+
+          <div class="our-expertise__cards">
+            <div class="expertise-card">
+              <img
+                src="./images/branding..png"
+                alt="img-branding"
+              />
+              <p class="card-title">Branding</p>
+              <h3>
+                We create additional value for companies, products, services as
+                well as verbal and visual ways to deliver it to the audience.
+              </h3>
+            </div>
+
+            <div class="expertise-card">
+              <img
+                src="./images/communication.svg"
+                alt="img-communication"
+              />
+              <p class="card-title">Communication</p>
+              <h3>
+                We strive to create communications that can increase media
+                performance. We use everything — words, meanings, stories, art,
+                movies.
+              </h3>
+            </div>
+
+            <div class="expertise-card">
+              <img
+                src="./images/strategy.svg"
+                alt="img-strategy"
+              />
+              <p class="card-title">Strategy</p>
+              <h3>
+                We create business growth strategies, from the moment of its
+                birth to the achievement of the necessary business indicators.
+              </h3>
+            </div>
+          </div>
+        </section>
+
+        <section class="process">
+          <h2 class="process__title">Our Process</h2>
+          <div class="process__cards">
+            <div class="process-card">
+              Step 1
+              <a
+                href="#learn-more"
+                class="process-card__link"
+              >
+                Learn More
+              </a>
+            </div>
+            <div class="process-card">
+              Step 2
+              <a
+                href="#learn-more"
+                class="process-card__link"
+              >
+                Learn More
+              </a>
+            </div>
+            <div class="process-card">
+              Step 3
+              <a
+                href="#learn-more"
+                class="process-card__link"
+              >
+                Learn More
+              </a>
+            </div>
+            <div class="process-card">
+              Step 4
+              <a
+                href="#learn-more"
+                class="process-card__link"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="learn-more"
+          class="learn-more-section"
+        ></section>
+
+        <section class="testimonials">
+          <h2 class="testimonials__title">What Our Clients Say</h2>
+          <div class="testimonials__cards">
+            <div class="testimonial-card">Testimonial 1</div>
+            <div class="testimonial-card">Testimonial 2</div>
+            <div class="testimonial-card">Testimonial 3</div>
+          </div>
+        </section>
+
+        <section class="vision">
+          <h2 class="vision__title">Vision, Passion, Results</h2>
+        </section>
+
+        <section class="send-message">
+          <h2 class="send-message__title">Send Us a Message</h2>
+          <form class="send-message__form">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="send-message__input"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="send-message__input"
+            />
+            <textarea
+              placeholder="Your Message"
+              class="send-message__textarea"
+            ></textarea>
+            <button
+              type="submit"
+              class="send-message__button"
+            >
+              Send
+            </button>
+          </form>
+        </section>
+
+        <section
+          id="contact-us"
+          class="contact-us"
+        >
+          <div class="contact-us__content">
+            <h2 class="contact-us__title">Send us a message</h2>
+            <form class="contact-us__form">
+              <label
+                class="contact-us__label"
+                for="email"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                class="contact-us__input"
+                placeholder="email@exa"
+                required
+              />
+              <label
+                class="contact-us__label"
+                for="name"
+              >
+                Your name
+              </label>
+              <input
+                type="text"
+                id="name"
+                class="contact-us__input"
+                placeholder="Your name"
+                required
+              />
+              <label
+                class="contact-us__label"
+                for="message"
+              >
+                Your message
+              </label>
+              <textarea
+                id="message"
+                class="contact-us__textarea"
+                placeholder="Your message"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                class="contact-us__button"
+              >
+                Send
+              </button>
+            </form>
+            <div class="contact-us__info">
+              <h3 class="contact-us__subtitle">Contact us</h3>
+              <p class="contact-us__call">
+                Call us:
+                <a href="tel:+654321987">654 321 987</a>
+              </p>
+              <p class="contact-us__address">
+                Visit us: 2905 West Drive, Buffalo Grove
+              </p>
+              <div class="contact-us__socials">
+                <a
+                  href="#"
+                  class="contact-us__social-link"
+                >
+                  Facebook
+                </a>
+                <a
+                  href="#"
+                  class="contact-us__social-link"
+                >
+                  Twitter
+                </a>
+                <a
+                  href="#"
+                  class="contact-us__social-link"
+                >
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="container">
+      <p class="footer__text">© 2024 Your Company. All rights reserved.</p>
+    </footer>
   </body>
 </html>

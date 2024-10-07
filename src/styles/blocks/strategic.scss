@@ -1,0 +1,86 @@
+.strategic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 48px 0;
+
+  @include responsive(small-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.strategic-agency {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+
+  &__title {
+    font-family: Poppins, sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 62.4px;
+    letter-spacing: -2px;
+    text-align: left;
+    margin-bottom: 32px;
+
+    @include responsive(tablet) {
+      font-size: 64px;
+      line-height: 68px;
+      margin-bottom: 24px;
+    }
+
+    @include responsive(small-desktop) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__description {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+    margin-bottom: 56px;
+
+    @include responsive(small-desktop) {
+      text-align: left;
+      margin-bottom: 72px;
+    }
+  }
+
+  &__cta-button {
+    display: block;
+    width: 100%;
+    max-width: 264px;
+    background: #2060f6;
+    color: #fff;
+    padding: 12px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+    @include responsive(tablet) {
+      margin: 0;
+    }
+
+    &:hover {
+      background-color: #2060f6 (darken, 10%);
+    }
+
+    a {
+      text-decoration: none;
+      font-family: Poppins, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 22.5px;
+      color: inherit;
+    }
+  }
+}

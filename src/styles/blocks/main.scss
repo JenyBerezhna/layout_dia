@@ -1,0 +1,63 @@
+.html {
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  font-family: $main-text-font;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 19.5px;
+  letter-spacing: 3px;
+  text-align: left;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  box-sizing: border-box;
+
+  @include content-padding-inline;
+}
+
+.black-container {
+  position: relative;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $bg-color;
+  padding: 20px;
+
+  @include responsive(small-desktop) {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.main {
+  &__content {
+    display: flex;
+    row-gap: 120px;
+    padding-block: 120px;
+
+    @include content-padding-inline;
+
+    @include responsive(tablet) {
+      padding-block: 148px;
+      row-gap: 148px;
+    }
+  }
+}

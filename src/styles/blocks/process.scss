@@ -1,0 +1,81 @@
+.process {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+
+  @include responsive(tablet) {
+    padding: 4rem;
+  }
+
+  @include responsive(desktop) {
+    padding: 6rem;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+
+    @include responsive(tablet) {
+      font-size: 2.5rem;
+    }
+
+    @include responsive(desktop) {
+      font-size: 3rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include responsive(tablet) {
+      justify-content: space-around;
+    }
+
+    @include responsive(desktop) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.process-card {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: left;
+  background-color: #fff;
+  padding: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__link {
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+
+  &__link:hover {
+    color: blue;
+  }
+
+  @include responsive(tablet) {
+    width: 48%;
+    transform: translateY(-30%);
+  }
+
+  @include responsive(desktop) {
+    width: 23%;
+    transform: translateY(0);
+  }
+
+  @include responsive(large) {
+    width: 20%;
+  }
+}
