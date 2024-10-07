@@ -1,26 +1,24 @@
 .process {
-  padding: 4rem 2rem;
+  padding: 20px 10px;
   background-color: #f9f9f9;
 
   @include responsive(tablet) {
-    padding: 4rem;
+    padding: 20px;
   }
 
   @include responsive(desktop) {
-    padding: 6rem;
+    padding: 30px;
   }
 
   &__title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 36px;
 
     @include responsive(tablet) {
-      font-size: 2.5rem;
+      font-size: 48px;
     }
 
     @include responsive(desktop) {
-      font-size: 3rem;
+      font-size: 16px;
     }
   }
 
@@ -46,9 +44,9 @@
   line-height: 19.5px;
   text-align: left;
   background-color: #fff;
-  padding: 2rem;
+  padding: 20px;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 36px;
   transform: translateY(-50%);
   transition: transform 0.3s ease;
 
