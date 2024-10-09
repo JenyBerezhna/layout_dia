@@ -28,35 +28,17 @@ body {
   @include content-padding-inline;
 }
 
-.black-container {
-  position: relative;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: $bg-color;
-  padding: 20px;
 
-  @include responsive(small-desktop) {
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    flex-direction: column;
-  }
-}
 
 .main {
   &__content {
     display: flex;
     row-gap: 120px;
-    padding-block: 120px;
+
 
     @include content-padding-inline;
 
     @include responsive(tablet) {
-      padding-block: 148px;
       row-gap: 148px;
     }
   }
