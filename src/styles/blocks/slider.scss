@@ -31,11 +31,10 @@
     width: 687px;
     height: 680px;
   }
-  
+
   @include responsive(large) {
     width: 1167px;
     height: 680px;
-
   }
 
   &__image {
