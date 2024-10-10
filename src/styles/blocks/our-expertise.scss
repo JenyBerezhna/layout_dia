@@ -46,6 +46,13 @@
         transform: scale(1.05);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
+
+      &_img {
+        height: auto;
+        margin-bottom: 32px;
+        align-self: center;
+        padding: 20px;
+      }
     }
   }
 }
@@ -68,9 +75,3 @@ h3 {
   text-align: center;
 }
 
-img {
-  height: auto;
-  margin-bottom: 32px;
-  align-self: center;
-  padding: 20px;
-}
