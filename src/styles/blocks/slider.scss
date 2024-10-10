@@ -77,13 +77,14 @@
 
     .slider__description {
       font-size: 14px;
-      margin-bottom: 32px;
     }
   }
 
   &__nav {
     display: flex;
     gap: 16px;
+    
+    @include content-padding-inline
   }
 
   .slider__icon {
