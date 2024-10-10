@@ -30,16 +30,4 @@ body {
 
 
 
-.main {
-  &__content {
-    display: flex;
-    row-gap: 120px;
 
-
-    @include content-padding-inline;
-
-    @include responsive(tablet) {
-      row-gap: 148px;
-    }
-  }
-}
