@@ -13,12 +13,13 @@
     line-height: 52.8px;
     text-align: center;
     color: #253757;
-    padding: 20px;
-    margin-top: 52px;
+    padding: 72px 0 56px;
+    margin: 0;
 
     @include responsive(tablet) {
       font-size: 52px;
       line-height: 78px;
+      padding: 128px 0 64px;
     }
   }
 
@@ -47,11 +48,10 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
       }
 
-      &_img {
+      &__img {
         height: auto;
-        margin-bottom: 32px;
         align-self: center;
-        padding: 20px;
+        margin-bottom: 16px;
       }
     }
   }
@@ -63,8 +63,8 @@
   font-weight: 600;
   line-height: 28px;
   text-align: center;
-  padding: 0 20px;
-  color: #253757;
+  color: $title-color;
+  margin-bottom: 16px;
 }
 
 h3 {
@@ -74,4 +74,3 @@ h3 {
   line-height: 21px;
   text-align: center;
 }
-
