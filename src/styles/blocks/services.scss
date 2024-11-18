@@ -4,9 +4,17 @@
   display: flex;
   flex-direction: column;
 
+
+  @include responsive(tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
   @include responsive(small-desktop) {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__info {
@@ -15,30 +23,25 @@
     padding: 20px;
     max-width: 100%;
     margin: 0 auto;
-  }
 
-  &__title {
-    font:
-      600 32px/41.6px Poppins,
-      sans-serif;
-    color: $title-color;
-    text-align: left;
-    margin-bottom: 16px;
-  }
-
-  &__description {
-    font:
-      400 14px/21px 'Open Sans',
-      sans-serif;
-    color: $text-color;
-    margin-bottom: 48px;
+    @include responsive(small-desktop) {
+      flex: 1;
+      margin-right: 20px;
+    }
   }
 
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
+    gap: 24px;
+    width: 100%;
+
+    @include responsive(small-desktop) {
+      flex: 2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
   }
 
   &-card {
@@ -56,13 +59,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 264px;
 
     &:hover {
       transform: scale(1.05);
-    }
-
-    @include responsive(small-desktop) {
-      max-width: 264px;
     }
 
     &:nth-of-type(even) {
@@ -71,7 +71,6 @@
       }
     }
 
-    // Call-to-action button styling
     &__cta-button {
       display: flex;
       align-items: center;
@@ -80,13 +79,9 @@
       color: #334563;
       border: none;
       border-radius: 8px;
-      font:
-        600 15px/22.5px Poppins,
-        sans-serif;
+      font: 600 15px/22.5px Poppins, sans-serif;
       cursor: pointer;
-      transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
+      transition: background-color 0.3s ease, color 0.3s ease;
 
       &:hover {
         background-color: #334563;
@@ -107,24 +102,21 @@
       &--large {
         width: 48px;
         height: 48px;
+        margin-right: 20px;
       }
     }
   }
 
   &__group {
     &__number {
-      font:
-        600 13px/19.5px Poppins,
-        sans-serif;
+      font: 600 13px/19.5px Poppins, sans-serif;
       color: #2060f6;
       text-align: center;
       margin-bottom: 24px;
     }
 
     &__text {
-      font:
-        600 13px/19.5px 'Open Sans',
-        sans-serif;
+      font: 600 13px/19.5px 'Open Sans', sans-serif;
       color: $text-color;
       text-align: left;
       margin-bottom: 32px;

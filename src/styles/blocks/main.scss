@@ -30,6 +30,10 @@ body {
 main > section {
   margin-bottom: 120px;
 
+  @include responsive(tablet){
+    margin-bottom: 148px;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
