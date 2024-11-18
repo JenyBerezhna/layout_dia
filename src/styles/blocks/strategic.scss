@@ -1,14 +1,15 @@
 .strategic {
   display: flex;
-  position: relative;
   flex-direction: column;
+  position: relative;
   align-items: center;
   width: 100%;
   background-color: $bg-color;
 
   @include responsive(small-desktop) {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
   }
 }
 
@@ -18,7 +19,17 @@
   flex-direction: column;
   text-align: left;
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin: 0 auto;
+
+  @include content-padding-inline;
+
+  @include responsive(small-desktop) {
+    grid-column: span 5;
+  }
+
+  @include responsive(design) {
+    grid-column: span 4;
+  }
 
   &__title {
     font-family: Poppins, sans-serif;
@@ -61,14 +72,13 @@
     background: #2060f6;
     color: #fff;
     padding: 12px;
-    margin: 0;
+    margin-bottom: 48px;
     border: none;
     cursor: pointer;
     border-radius: 8px;
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s ease;
-
 
     &:hover {
       background-color: #2060f6 (darken, 10%);

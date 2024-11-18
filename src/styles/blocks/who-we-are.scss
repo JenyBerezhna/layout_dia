@@ -1,18 +1,12 @@
 .who-we-are {
-  margin: 0;
-  padding: 0;
   text-align: center;
 
   @include content-padding-inline;
 
   &__title {
-    font-family: Poppins, sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 48px;
     text-align: center;
-    color: #253757;
     margin-bottom: 24px;
+    color: $title-color;
 
     @include responsive(tablet) {
       margin-bottom: 16px;
@@ -29,8 +23,19 @@
     font-weight: 600;
     line-height: 33px;
     text-align: center;
-    color: $main-text-color;
-    margin: auto;
+    color: $text-color;
+    margin: 0 auto;
     padding: 20px;
   }
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 754px;
 }

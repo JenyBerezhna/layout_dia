@@ -1,7 +1,7 @@
 .our-expertise {
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   background-color: #fff;
 
   @include content-padding-inline;
@@ -27,44 +27,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 72px;
+    gap: 20px;
 
     @include responsive(small-desktop) {
       flex-direction: row;
-      justify-content: space-around;
-    }
-
-    .expertise-card {
-      color: #6c788b;
-      padding: 20px;
-      width: 100%;
-
-      @include responsive(small-desktop) {
-        max-width: 264px;
-      }
-
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      &__img {
-        height: auto;
-        align-self: center;
-        margin-bottom: 16px;
-      }
+      justify-content: space-between;
     }
   }
 }
 
-.card-title {
-  font-family: Poppins, sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
+.expertise-card {
+  color: $text-color;
+  padding: 20px;
+  width: 100%;
+
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  &__img {
+    height: auto;
+    align-self: center;
+    margin-bottom: 16px;
+  }
+}
+
+.section-title {
   text-align: center;
-  color: $title-color;
   margin-bottom: 16px;
+  color: $title-color;
 }
 
 h3 {

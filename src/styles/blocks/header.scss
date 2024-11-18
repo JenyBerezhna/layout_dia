@@ -6,13 +6,13 @@
   width: 100%;
   background-color: $bg-color;
 
-
   &__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-    z-index: 2;
+    padding: 20px;
+    width: 100%;
+
+    @include content-padding-inline;
   }
 
   &__logo {
@@ -98,6 +98,7 @@
 
   &__menu-icon {
     display: block;
+    margin-left: 32px;
     background: none;
     border: none;
     cursor: pointer;
@@ -132,15 +133,16 @@
     text-transform: uppercase;
     color: #fff;
     transition: background-color 0.3s;
+    margin-right: 20px;
 
     @include responsive(small-desktop) {
-      margin-left: 20px;
+      margin-right: 40px;
     }
 
     &:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
     a {
       color: inherit;
@@ -158,4 +160,10 @@
       bottom: -8px;
     }
   }
+}
+
+.black-container {
+  max-width: 1600px;
+
+  @include content-padding-inline;
 }

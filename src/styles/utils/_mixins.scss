@@ -18,7 +18,6 @@ $breakpoints: (
   $width: map.get($breakpoints, $size);
 
   @media (min-width: $width) {
-
     @content;
   }
 }

@@ -1,121 +1,133 @@
 .services {
+  background-color: #e0e0e0;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;
-  background-color: #f9f9f9;
+  flex-direction: column;
+
+  @include responsive(small-desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__info {
-    padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: left;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
   &__title {
-    font: 600 32px/41.6px Poppins, sans-serif;
+    font:
+      600 32px/41.6px Poppins,
+      sans-serif;
     color: $title-color;
-    margin: 16px 0;
     text-align: left;
+    margin-bottom: 16px;
   }
 
   &__description {
-    font: 400 14px/21px 'Open Sans', sans-serif;
-    color: $main-text-color;
+    font:
+      400 14px/21px 'Open Sans',
+      sans-serif;
+    color: $text-color;
     margin-bottom: 48px;
-    text-align: left;
   }
 
-&__cards {
-  display: grid;
-  grid-template-columns: (1fr);
-  gap: 20px;
-}
-
-@include responsive(small-desktop) {
-    grid-template-columns: repeat(2, 1fr);
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 30px;
   }
-}
 
-
-
-
-
-.services-card {
-  font: 600 13px/19.5px 'Open Sans', sans-serif;
-  background-color: #fff;
-  padding: 20px;
-  width: 100%;
-  transition: transform 0.3s ease;
-
-  .card {
-        &:nth-child(odd) {
-          transform: translateY(-50%);
-        }
-      }
-
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  &__number {
-    font: 600 13px/19.5px Poppins, sans-serif;
-    color: #2060F6;
-    text-align: center;
-  }
-
-  &__text {
-    font: 600 13px/19.5px 'Open Sans', sans-serif;
-    color: $main-text-color;
-    text-align: left;
-  }
-
-  &__cta-button {
+  &-card {
+    font:
+      600 13px/19.5px 'Open Sans',
+      sans-serif;
+    background-color: #fff;
+    color: $text-color;
+    height: 264px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0.1);
+    transition: transform 0.3s ease;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 143px;
-    height: 40px;
-    background: #fff;
-    color: #334563;
-    border: none;
-    border-radius: 8px;
-    font: 600 15px/22.5px Poppins, sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-direction: column;
+    justify-content: space-between;
 
     &:hover {
-      background-color: #334563;
-      color: #fff;
+      transform: scale(1.05);
+    }
 
-      &__icon {
-        filter: invert(1);
+    @include responsive(small-desktop) {
+      max-width: 264px;
+    }
+
+    &:nth-of-type(even) {
+      @include responsive(small-desktop) {
+        transform: translateY(-50%);
+      }
+    }
+
+    // Call-to-action button styling
+    &__cta-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      color: #334563;
+      border: none;
+      border-radius: 8px;
+      font:
+        600 15px/22.5px Poppins,
+        sans-serif;
+      cursor: pointer;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+      &:hover {
+        background-color: #334563;
+        color: #fff;
+
+        .services__icon {
+          filter: invert(1);
+        }
+      }
+    }
+
+    &__icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 16px;
+      transition: filter 0.3s ease;
+
+      &--large {
+        width: 48px;
+        height: 48px;
       }
     }
   }
 
-  &__icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 16px;
-    transition: filter 0.3s ease;
+  &__group {
+    &__number {
+      font:
+        600 13px/19.5px Poppins,
+        sans-serif;
+      color: #2060f6;
+      text-align: center;
+      margin-bottom: 24px;
+    }
 
-    &--large {
-      width: 48px;
-      height: 48px;
-      margin-right: 16px;
+    &__text {
+      font:
+        600 13px/19.5px 'Open Sans',
+        sans-serif;
+      color: $text-color;
+      text-align: left;
+      margin-bottom: 32px;
     }
   }
-
-  &__link {
-    text-decoration: none;
-    margin: 0 auto;
-    display: inline-block;
-  }
 }
-
-h4 {
-  text-align: left;
-}
-
-
