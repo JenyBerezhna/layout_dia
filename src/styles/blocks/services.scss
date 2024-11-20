@@ -1,125 +1,152 @@
 .services {
   background-color: #e0e0e0;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
 
+  @include content-padding-inline;
 
   @include responsive(tablet) {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-
   @include responsive(small-desktop) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   &__info {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 264px;
+    text-align: left;
 
-    @include responsive(small-desktop) {
-      flex: 1;
-      margin-right: 20px;
+    @include responsive(tablet) {
+      grid-column: 1 / -1;
     }
+  }
+
+  &__description {
+    font: 400 14px/21px 'Open Sans', sans-serif;
+    color: $text-color;
+    margin-bottom: 32px;
+    padding: 20px;
   }
 
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    width: 100%;
+    gap: 30px;
+    max-width: 560px;
+    align-items: center;
+   justify-content: center;
+   
+    @include responsive(tablet) {
+      grid-column: 1 / -1;
+    }
 
     @include responsive(small-desktop) {
-      flex: 2;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-  }
-
-  &-card {
-    font:
-      600 13px/19.5px 'Open Sans',
-      sans-serif;
-    background-color: #fff;
-    color: $text-color;
-    height: 264px;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 264px;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    &:nth-of-type(even) {
-      @include responsive(small-desktop) {
-        transform: translateY(-50%);
-      }
-    }
-
-    &__cta-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-      color: #334563;
-      border: none;
-      border-radius: 8px;
-      font: 600 15px/22.5px Poppins, sans-serif;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
-
-      &:hover {
-        background-color: #334563;
-        color: #fff;
-
-        .services__icon {
-          filter: invert(1);
-        }
-      }
-    }
-
-    &__icon {
-      width: 40px;
-      height: 40px;
-      margin-right: 16px;
-      transition: filter 0.3s ease;
-
-      &--large {
-        width: 48px;
-        height: 48px;
-        margin-right: 20px;
-      }
+      grid-column: 2 / -1;
+      grid-template-columns: 1fr 1fr;
     }
   }
 
   &__group {
-    &__number {
-      font: 600 13px/19.5px Poppins, sans-serif;
-      color: #2060f6;
-      text-align: center;
-      margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 10px;
+
+    &--odd,
+    &--even {
+       display: flex;
+  flex-direction: column;
+  gap: 30px;
+
     }
 
-    &__text {
-      font: 600 13px/19.5px 'Open Sans', sans-serif;
-      color: $text-color;
-      text-align: left;
-      margin-bottom: 32px;
+    &--even {
+      transform: translateY(0);
+
+      @include responsive(tablet) {
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.services-card {
+  background-color: #fff;
+  color: $text-color;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 264px;
+  max-width: 264px;
+  font: 600 13px/19.5px 'Open Sans', sans-serif;
+
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+
+  @include responsive(small-desktop) {
+    flex: none;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__number {
+    margin-bottom: 16px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+    margin-bottom: 16px;
+  }
+
+  &__cta-button {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    color: #334563;
+    border: none;
+    border-radius: 8px;
+    font: 600 15px/22.5px Poppins, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: #334563;
+      color: #fff;
+    }
+
+    .services-card__icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      transition: filter 0.3s ease;
+
+      &--large {
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+      }
+
+      &:hover {
+        filter: invert(1);
+      }
     }
   }
 }
