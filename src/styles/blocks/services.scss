@@ -1,152 +1,186 @@
 .services {
   background-color: #e0e0e0;
   padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 
   @include content-padding-inline;
 
   @include responsive(tablet) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include responsive(small-desktop) {
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    padding: 20px;
     width: 100%;
-    max-width: 264px;
-    text-align: left;
+    max-width: 364px;
+    margin-bottom: 48px;
 
     @include responsive(tablet) {
-      grid-column: 1 / -1;
+      width: 50%;
+      margin-bottom: 56px;
     }
-  }
 
-  &__description {
-    font: 400 14px/21px 'Open Sans', sans-serif;
-    color: $text-color;
-    margin-bottom: 32px;
-    padding: 20px;
+    @include responsive(desktop) {
+      margin-bottom: 0;
+    }
+
+    &-topic {
+      font-family: Poppins, sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-align: left;
+      text-transform: uppercase;
+      color: #c0cdd7;
+      margin-bottom: 8px;
+    }
+
+    &-title {
+      @include section-title;
+
+      text-align: left;
+      margin: 8px 0;
+    }
+
+    &-description {
+      @include section-description;
+
+      color: $text-color;
+    }
   }
 
   &__cards {
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 560px;
-    align-items: center;
-   justify-content: center;
-   
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 20px;
+
     @include responsive(tablet) {
-      grid-column: 1 / -1;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      gap: 30px;
     }
 
     @include responsive(small-desktop) {
       display: grid;
-      grid-column: 2 / -1;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
   }
 
   &__group {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    margin: 0 10px;
+    gap: 20px;
+    justify-content: center;
 
-    &--odd,
-    &--even {
-       display: flex;
-  flex-direction: column;
-  gap: 30px;
-
+    &--odd {
+      transform: translateY(0);
+      gap: 30px;
+      margin-bottom: 24px;
     }
 
     &--even {
-      transform: translateY(0);
-
-      @include responsive(tablet) {
-        transform: translateY(-50%);
-      }
+      transform: translateY(-30%);
+      gap: 30px;
+      transition: transform 0.3s ease;
     }
   }
 }
 
 .services-card {
   background-color: #fff;
-  color: $text-color;
-  padding: 20px;
+  height: 100%;
+  max-width: 280px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 264px;
-  max-width: 264px;
-  font: 600 13px/19.5px 'Open Sans', sans-serif;
-
-  transform: translateY(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   @include responsive(small-desktop) {
-    flex: none;
+    max-width: 264px;
   }
 
   &:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   }
 
   &__number {
-    margin-bottom: 16px;
-
     img {
-      width: 40px;
-      height: 40px;
+      width: 46px;
+      height: 24px;
     }
   }
 
   &__text {
-    flex-grow: 1;
-    margin-bottom: 16px;
+    @include card-description;
+    
+    margin: 16px 0;
+    line-height: 20px;
+    color: $text-color;
   }
 
-  &__cta-button {
+  &__link {
     display: flex;
-    align-items: center;
-    background: #fff;
+    align-self: center;
+    justify-content: center;
     color: #334563;
-    border: none;
-    border-radius: 8px;
-    font: 600 15px/22.5px Poppins, sans-serif;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22.5px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 
     &:hover {
-      background-color: #334563;
-      color: #fff;
+      color: blue;
+      background: rgb(199, 198, 198);
+      border-radius: 6px;
+      text-transform: uppercase;
     }
+  }
 
-    .services-card__icon {
-      width: 16px;
-      height: 16px;
+  &__services-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    font-size: 15px;
+    color: #334563;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s ease;
+
+    &:hover {
+      color: #fff;
+      background-color: #334563;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin-right: 8px;
+
+    &--large {
+      width: 48px;
+      height: 48px;
       margin-right: 8px;
-      transition: filter 0.3s ease;
-
-      &--large {
-        width: 20px;
-        height: 20px;
-        margin-right: 20px;
-      }
-
-      &:hover {
-        filter: invert(1);
-      }
     }
   }
 }

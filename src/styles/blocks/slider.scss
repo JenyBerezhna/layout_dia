@@ -31,25 +31,31 @@
       gap: 18px;
       bottom: 32px;
     }
+  }
 
-    &__text {
-      text-align: left;
-      color: white;
+  &__text {
+    text-align: left;
 
-      @include responsive(small-desktop) {
-        margin-left: 4px;
-      }
+    @include responsive(small-desktop) {
+      margin-left: 4px;
     }
 
-    &__title {
+    &--title {
       font-size: 24px;
       text-transform: uppercase;
-      margin-top: 8px;
+      margin: 8px 0;
+      color: #fff;
     }
 
-    &__description {
-      font-size: 14px;
+    &--description {
+      font:
+        400 14px/19.6px 'Open Sans',
+        sans-serif;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
       margin-top: 8px;
+      color: #fff;
     }
   }
 
@@ -57,16 +63,16 @@
     display: flex;
     gap: 16px;
     padding: auto;
-  }
 
-  &__icon {
-    cursor: pointer;
-    margin-bottom: 16px;
+    &-icon {
+      cursor: pointer;
+      margin-bottom: 16px;
 
-    &--left,
-    &--right {
-      width: 32px;
-      height: 32px;
+      &--left,
+      &--right {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 }

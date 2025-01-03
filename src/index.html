@@ -21,109 +21,114 @@
   <body>
     <!-- Header Section -->
     <header class="header">
-      <div class="header__content">
-        <div class="header__logo">
-          <a
-            href="#"
-            aria-label="Logo"
+      <div class="container">
+        <div class="header__content">
+          <div class="header__logo">
+            <a
+              href="#"
+              aria-label="Logo"
+            >
+              <img
+                src="./styles/images/logo/Air.svg"
+                alt="Air Logo"
+                class="logo"
+              />
+            </a>
+          </div>
+          <!-- Navigation Section -->
+          <nav
+            class="header__nav"
+            role="navigation"
           >
-            <img
-              src="./styles/images/logo/Air.svg"
-              alt="Air Logo"
-              class="logo"
+            <input
+              type="checkbox"
+              id="menu-checkbox"
+              class="header__menu-checkbox"
             />
-          </a>
-        </div>
-        <!-- Navigation Section -->
-        <nav
-          class="header__nav"
-          role="navigation"
-        >
-          <input
-            type="checkbox"
-            id="menu-checkbox"
-            class="header__menu-checkbox"
-          />
-          <label
-            for="menu-checkbox"
-            class="header__menu-icon"
-          >
-            <img
-              src="./styles/images/icons/menu-humbg.png"
-              alt="Open Menu"
-              class="icon"
-            />
-          </label>
-          <!-- Menu Links -->
-          <ul
-            class="header__menu"
-            aria-label="Main Menu"
-          >
-            <li class="header__menu-item">
-              <a
-                href="#home"
-                class="header__menu-link"
-              >
-                Home
-              </a>
-            </li>
-            <li class="header__menu-item">
-              <a
-                href="#our-expertise"
-                class="header__menu-link"
-              >
-                About
-              </a>
-            </li>
-            <li class="header__menu-item">
-              <a
-                href="#services"
-                class="header__menu-link"
-              >
-                Services
-              </a>
-            </li>
-            <li class="header__menu-item">
+            <label
+              for="menu-checkbox"
+              class="header__menu-icon"
+            >
+              <img
+                src="./styles/images/icons/menu-humbg.png"
+                alt="Open Menu"
+                class="icon"
+              />
+            </label>
+            <!-- Menu Links -->
+            <ul
+              class="header__menu"
+              aria-label="Main Menu"
+            >
+              <li class="header__menu-item">
+                <a
+                  href="#home"
+                  class="header__menu-link"
+                >
+                  Home
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a
+                  href="#our-expertise"
+                  class="header__menu-link"
+                >
+                  About
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a
+                  href="#services"
+                  class="header__menu-link"
+                >
+                  Services
+                </a>
+              </li>
+              <li class="header__menu-item">
+                <a
+                  href="#contacts"
+                  class="header__menu-link"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+            <!-- Hire Us Button -->
+            <button
+              id="#contacts"
+              class="header__hire-us"
+            >
               <a
                 href="#contacts"
-                class="header__menu-link"
+                class="button"
               >
-                Contact Us
+                Hire Us
               </a>
-            </li>
-          </ul>
-          <!-- Hire Us Button -->
-          <button
-          id="#contacts"
-          class="header__hire-us">
-            <a
-              href="#contacts"
-              class="button"
-            >
-              Hire Us
-            </a>
-          </button>
-        </nav>
+            </button>
+          </nav>
+        </div>
       </div>
     </header>
     <!-- #region -->
 
     <section class="strategic">
-      <div
-        class="strategic-agency"
-        id="home"
-      >
-        <h1 class="strategic-agency__title">Strategic Agency</h1>
-        <p class="strategic-agency__description">
-          We believe in the power of bold ideas that can solve business
-          challenges.
-        </p>
-        <a
-          href="#our-expertise"
-          class="strategic-agency__cta-button"
+      <div class="black-container">
+        <div
+          class="strategic-agency"
+          id="home"
         >
-          Learn More
-        </a>
+          <h1 class="strategic-agency__title">Strategic Agency</h1>
+          <p class="strategic-agency__description">
+            We believe in the power of bold ideas that can solve business
+            challenges.
+          </p>
+          <a
+            href="#our-expertise"
+            class="button__cta-button"
+          >
+            Learn More
+          </a>
+        </div>
       </div>
 
       <!-- Slider-->
@@ -133,19 +138,20 @@
           <div class="slider__nav">
             <img
               src="./styles/images/icons/Arrow left.png"
-              alt="Ptevious Slide"
-              class="slider__icon slider__icon-left"
+              alt="Previous Slide"
+              class="slider__nav-icon slider__nav-icon--left"
             />
             <img
               src="./styles/images/icons/Arrow right.png"
               alt="Next Slide"
-              class="slider__icon slider__icon-right"
+              class="slider__nav-icon slider__nav-icon--right"
             />
           </div>
+
           <!-- Slider Text -->
           <div class="slider__text">
-            <h2 class="slider__title">Intro</h2>
-            <p class="slider__description">
+            <h2 class="slider__text--title">Intro</h2>
+            <p class="slider__text--description">
               By the same illusion which lifts the
               <br />
               horizon.
@@ -165,7 +171,7 @@
       >
         <div class="container">
           <div class="wrap">
-            <h2 class="section-title">Who We Are</h2>
+            <h2 class="who-we-are__section-title">Who We Are</h2>
             <p class="who-we-are__description">
               We embrace a strategic approach to creative ideas. We are
               interested in people and human relationships. This is the main
@@ -182,16 +188,16 @@
         class="our-expertise"
       >
         <div class="container">
-          <h2 class="section-title">Our Expertise</h2>
+          <h2 class="our-expertise__title">Our Expertise</h2>
           <div class="our-expertise__cards">
             <div class="expertise-card">
               <img
                 class="expertise-card__img"
                 src="./styles/images/branding..png"
-                alt="img-branding"
+                alt="Branding image"
               />
-              <p class="card-title">Branding</p>
-              <h3>
+              <p class="expertise-card__card-title">Branding</p>
+              <h3 class="expertise-card__card-description">
                 We create additional value for companies, products, services as
                 well as verbal and visual ways to deliver it to the audience.
               </h3>
@@ -200,10 +206,10 @@
               <img
                 class="expertise-card__img"
                 src="./styles/images/communication.svg"
-                alt="img-communication"
+                alt="Communication image"
               />
-              <p class="card-title">Communication</p>
-              <h3>
+              <p class="expertise-card__card-title">Communication</p>
+              <h3 class="expertise-card__card-description">
                 We strive to create communications that can increase media
                 performance. We use everything — words, meanings, stories, art,
                 movies.
@@ -213,10 +219,10 @@
               <img
                 class="expertise-card__img"
                 src="./styles/images/strategy.svg"
-                alt="img-strategy"
+                alt="Strategy image"
               />
-              <p class="card-title">Strategy</p>
-              <h3>
+              <p class="expertise-card__card-title">Strategy</p>
+              <h3 class="expertise-card__card-description">
                 We create business growth strategies, from the moment of its
                 birth to the achievement of the necessary business indicators.
               </h3>
@@ -228,147 +234,150 @@
       <!-- Services Section -->
       <section
         id="services"
-        class="services">
-        <div class="services__info">
-          <h4 class="topic">Services</h4>
-          <h3 class="title services__title">Air is a full-service creative agency</h3>
-          <p class="services__description">
-            Deep analytics, strong strategy, and bright creative ideas.
-            <br />
-            <br />
-            We are sure that first-rate work is possible only if all three
-            components are united.
-          </p>
-        </div>
-
-        <div class="services__cards">
-          <!-- Group 1: Cards 1 and 3 -->
-          <div class="services__group--odd">
-            <div class="services-card">
-              <span class="services-card__number">
-                <img
-                  src="./styles/images/icons/001.png"
-                  alt="001"
-                />
-              </span>
-              <p class="services-card__text">
-                Brand Development
-                <br />
-                Copywriting
-                <br />
-                Logo & Website Design
-                <br />
-                Packaging
-              </p>
-              <a
-                href="#learn-more"
-                class="services-card__link"
-              >
-                <span class="services-card__cta-button">
-                  <img
-                    src="./styles/images/icons/card-arrow.png"
-                    alt="Arrow icon"
-                    class="services-card__icon"
-                  />
-                  Learn More
-                </span>
-              </a>
-            </div>
-
-            <div class="services-card">
-              <span class="services-card__number">
-                <img
-                  src="./styles/images/icons/003.png"
-                  alt="003"
-                />
-              </span>
-              <p class="services-card__text">
-                Marketing Strategy
-                <br />
-                Email Marketing
-                <br />
-                Paid Advertising
-                <br />
-                Blog Content & SEO
-              </p>
-              <a
-                href="#learn-more"
-                class="services-card__link"
-              >
-                <span class="services-card__cta-button">
-                  <img
-                    src="./styles/images/icons/card-arrow.png"
-                    alt="Arrow icon"
-                    class="services-card__icon"
-                  />
-                  Learn More
-                </span>
-              </a>
-            </div>
+        class="services"
+      >
+        <div class="container">
+          <div class="services__info">
+            <h4 class="services__info-topic">Services</h4>
+            <h2 class="services__info-title">
+              Air is a full-service creative agency
+            </h2>
+            <p class="services__info-description">
+              Deep analytics, strong strategy, and bright creative ideas.
+              <br />
+              <br />
+              We are sure that first-rate work is possible only if all three
+              components are united.
+            </p>
           </div>
 
-          <!-- Group 2: Cards 2 and 4 -->
-          <div class="services__group--even">
-            <div class="services-card">
-              <span class="services-card__number">
-                <img
-                  src="./styles/images/icons/002.png"
-                  alt="002"
-                />
-              </span>
-              <p class="services-card__text">
-                Content Production
-                <br />
-                Graphic Design
-                <br />
-                Video Production
-                <br />
-                Post Production
-              </p>
-              <a
-                href="#learn-more"
-                class="services-card__link"
-              >
-                <span class="services-card__cta-button">
+          <div class="services__cards">
+            <!-- Group 1 -->
+            <div class="services__group services__group--odd">
+              <div class="services-card">
+                <span class="services-card__number">
                   <img
-                    src="./styles/images/icons/card-arrow.png"
-                    alt="Arrow icon"
-                    class="services-card__icon"
+                    src="./styles/images/icons/001.png"
+                    alt="001"
                   />
-                  Learn More
                 </span>
-              </a>
+                <p class="services-card__text">
+                  Brand Development
+                  <br />
+                  Copywriting
+                  <br />
+                  Logo & Website Design
+                  <br />
+                  Packaging
+                </p>
+                <a
+                  href="#learn-more"
+                  class="services-card__link"
+                >
+                  <span class="services__services-button">
+                    <img
+                      src="./styles/images/icons/card-arrow.png"
+                      alt="Arrow icon"
+                      class="services-card__icon"
+                    />
+                    Learn More
+                  </span>
+                </a>
+              </div>
+              <div class="services-card">
+                <span class="services-card__number">
+                  <img
+                    src="./styles/images/icons/003.png"
+                    alt="003"
+                  />
+                </span>
+                <p class="services-card__text">
+                  Marketing Strategy
+                  <br />
+                  Email Marketing
+                  <br />
+                  Paid Advertising
+                  <br />
+                  Blog Content & SEO
+                </p>
+                <a
+                  href="#learn-more"
+                  class="services-card__link"
+                >
+                  <span class="services__services-button">
+                    <img
+                      src="./styles/images/icons/card-arrow.png"
+                      alt="Arrow icon"
+                      class="services-card__icon"
+                    />
+                    Learn More
+                  </span>
+                </a>
+              </div>
             </div>
 
-            <div class="services-card">
-              <span class="services-card__number">
-                <img
-                  src="./styles/images/icons/004.png"
-                  alt="004"
-                />
-              </span>
-              <p class="services-card__text">
-                Digital Communications
-                <br />
-                Influencer Marketing
-                <br />
-                Product Placements
-                <br />
-                Strategic Partnerships
-              </p>
-              <a
-                href="#learn-more"
-                class="services-card__link"
-              >
-                <span class="services-card__cta-button">
+            <!-- Group 2 -->
+            <div class="services__group services__group--even">
+              <div class="services-card">
+                <span class="services-card__number">
                   <img
-                    src="./styles/images/icons/card-arrow.png"
-                    alt="Arrow icon"
-                    class="services-card__icon--large"
+                    src="./styles/images/icons/002.png"
+                    alt="002"
                   />
-                  Learn More
                 </span>
-              </a>
+                <p class="services-card__text">
+                  Content Production
+                  <br />
+                  Graphic Design
+                  <br />
+                  Video Production
+                  <br />
+                  Post Production
+                </p>
+                <a
+                  href="#learn-more"
+                  class="services-card__link"
+                >
+                  <span class="services__services-button">
+                    <img
+                      src="./styles/images/icons/card-arrow.png"
+                      alt="Arrow icon"
+                      class="services-card__icon"
+                    />
+                    Learn More
+                  </span>
+                </a>
+              </div>
+              <div class="services-card">
+                <span class="services-card__number">
+                  <img
+                    src="./styles/images/icons/004.png"
+                    alt="004"
+                  />
+                </span>
+                <p class="services-card__text">
+                  Digital Communications
+                  <br />
+                  Influencer Marketing
+                  <br />
+                  Product Placements
+                  <br />
+                  Strategic Partnerships
+                </p>
+                <a
+                  href="#learn-more"
+                  class="services-card__link"
+                >
+                  <span class="services__services-button">
+                    <img
+                      src="./styles/images/icons/card-arrow.png"
+                      alt="Arrow icon"
+                      class="services-card__icon services-card__icon--large"
+                    />
+                    Learn More
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -376,8 +385,8 @@
 
       <!--Testimonials Section-->
       <section
-      id="testimonials"
-      class="testimonials"
+        id="testimonials"
+        class="testimonials"
       >
         <h4 class="topic">Testimonials</h4>
         <h2 class="title testimonials__title">What People Say</h2>
@@ -466,7 +475,7 @@
           </p>
           <a
             href="#contacts"
-            class="vision__cta-button"
+            class="button__cta-button"
           >
             Apply
           </a>
@@ -475,8 +484,9 @@
 
       <!-- Contact Section -->
       <section
-      id="contacts"
-      class="contacts">
+        id="contacts"
+        class="contacts"
+      >
         <article class="send-message">
           <h2 class="section-title">Send us a message</h2>
 
@@ -493,7 +503,7 @@
             <input
               type="text"
               id="name"
-              placeholder="Your Name"
+              placeholder="Your name"
               required
             />
 
@@ -506,7 +516,7 @@
 
             <button
               type="submit"
-              class="cta-button"
+              class="button__cta-button"
             >
               Send
             </button>
@@ -539,11 +549,9 @@
                   alt="Facebook"
                 />
               </a>
-              <a href="#">
-                <img
-                  src="./styles/images/icons/twitter-icon.png"
-                  alt="Twitter"
-                />
+              <a href="https://twitter.com"
+              class="social-icon twitter" target="_blank">
+                <img src="./styles/images/icons/twitter-icon.png" alt="Twitter" />
               </a>
               <a href="#">
                 <img

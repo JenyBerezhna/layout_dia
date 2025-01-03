@@ -5,16 +5,26 @@
   align-items: center;
   width: 100%;
   background-color: $bg-color;
+  margin-bottom: 120px;
+
 
   @include responsive(small-desktop) {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 24px;
+   flex-direction: row;
+   justify-content: space-between;
+    margin-bottom: 148px;
   }
 }
 
+.black-container {
+  max-width: 1600px;
+  align-self: center;
+  margin: 0;
+}
+
+
 .strategic-agency {
   display: flex;
+  max-width: 490px;
   position: relative;
   flex-direction: column;
   text-align: left;
@@ -23,13 +33,6 @@
 
   @include content-padding-inline;
 
-  @include responsive(small-desktop) {
-    grid-column: span 5;
-  }
-
-  @include responsive(design) {
-    grid-column: span 4;
-  }
 
   &__title {
     font-family: Poppins, sans-serif;
@@ -38,12 +41,14 @@
     line-height: 62.4px;
     letter-spacing: -2px;
     text-align: left;
-    margin-bottom: 32px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #fff;
 
     @include responsive(tablet) {
       font-size: 64px;
+      font-weight: 600;
       line-height: 68px;
-      margin-bottom: 24px;
     }
 
     @include responsive(small-desktop) {
@@ -58,17 +63,15 @@
     line-height: 27px;
     text-align: left;
     margin-bottom: 56px;
+    color: #fff;
 
     @include responsive(small-desktop) {
-      text-align: left;
       margin-bottom: 72px;
     }
   }
 
   &__cta-button {
     display: block;
-    width: 100%;
-    max-width: 264px;
     background: #2060f6;
     color: #fff;
     padding: 12px;
@@ -79,6 +82,11 @@
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s ease;
+    width: 280px;
+
+    @include responsive(tablet) {
+      width: 264px;
+    }
 
     &:hover {
       background-color: #2060f6 (darken, 10%);
@@ -90,7 +98,9 @@
       font-size: 15px;
       font-weight: 600;
       line-height: 22.5px;
+      text-align: center;
       color: inherit;
     }
   }
 }
+

@@ -3,10 +3,12 @@
 
   @include content-padding-inline;
 
-  &__title {
+  &__section-title {
     text-align: center;
     margin-bottom: 24px;
     color: $title-color;
+
+    @include section-title;
 
     @include responsive(tablet) {
       margin-bottom: 16px;
@@ -18,14 +20,18 @@
   }
 
   &__description {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 33px;
+   @include section-description;
+   
     text-align: center;
     color: $text-color;
     margin: 0 auto;
     padding: 20px;
+
+    @include responsive(tablet) {
+      font:
+        600 24px/36px 'Open Sans',
+        sans-serif;
+    }
   }
 }
 

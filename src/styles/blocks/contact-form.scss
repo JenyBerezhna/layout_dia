@@ -97,11 +97,17 @@
   input::placeholder,
   textarea::placeholder {
     font-family: Poppins, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
-    line-height: 22px;
+    line-height: 22.5px;
+    color: lightgray;
     text-align: left;
-    color: #fff;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  &:hover {
+    color: (#2060f6, darken, 10%);
   }
 
   &__cta-button {
@@ -121,17 +127,18 @@
 
     &:hover {
       background-color: (#2060f6, darken, 10%);
+      transform: scale(1.05);
     }
+
     &:active {
       background-color: gray;
     }
 
     a {
       text-decoration: none;
-      font-family: Poppins, sans-serif;
-      font-size: 15px;
-      font-weight: 600;
-      line-height: 22.5px;
+      font: 600 15px/22.5px Poppins,
+      sans-serif;
+      text-align: center;
       color: inherit;
     }
   }
