@@ -19,7 +19,7 @@
   max-width: 1600px;
   align-self: center;
   margin: 0;
-} 
+}
 
 
 .strategic-agency {
@@ -32,6 +32,14 @@
   margin: 0 auto;
 
   @include content-padding-inline;
+
+  @include responsive(tablet){
+    margin-bottom: 140px;
+  }
+  
+  @include responsive(small-desktop){
+    margin-bottom: 190px;
+  }
 
 
   &__title {
@@ -75,7 +83,7 @@
     background: #2060f6;
     color: #fff;
     padding: 12px;
-    margin-bottom: 48px;
+    margin-bottom: 8px;
     border: none;
     cursor: pointer;
     border-radius: 8px;

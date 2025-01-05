@@ -1,11 +1,12 @@
 .header {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   background-color: $bg-color;
   margin: 0;
+  padding: 0;
 
   &__content {
     display: flex;
@@ -13,7 +14,6 @@
     align-items: center;
     padding: 20px;
     width: 100%;
-
     text-transform: uppercase;
   }
 
@@ -135,10 +135,10 @@
     text-transform: uppercase;
     color: #fff;
     transition: background-color 0.3s;
-    margin-right: 20px;
+    margin-left: 20px;
 
     @include responsive(small-desktop) {
-      margin-right: 40px;
+      margin-left: 40px;
     }
 
     &:hover {

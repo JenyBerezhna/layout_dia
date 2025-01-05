@@ -2,9 +2,11 @@
   text-align: center;
   margin: 0 auto;
   background-color: #fff;
-  margin-bottom: 120px;
+  padding-bottom: 48px;
+  margin-bottom: 96px;
 
   @include responsive(tablet){
+    padding-bottom: 72px;
     margin-bottom: 148px;
   }
 

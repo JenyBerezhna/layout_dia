@@ -1,17 +1,22 @@
 .services {
   background-color: #e0e0e0;
-  padding: 20px;
+  padding-top: 96px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 
+
   @include content-padding-inline;
 
-  @include responsive(tablet) {
+  @include responsive(desktop) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 176px;
   }
+
+
+
 
   &__info {
     display: flex;
@@ -21,12 +26,13 @@
     margin-bottom: 48px;
 
     @include responsive(tablet) {
-      width: 50%;
-      margin-bottom: 56px;
+     width: 50%;
+     margin-bottom: 8px;
+
     }
 
     @include responsive(desktop) {
-      margin-bottom: 0;
+      margin-bottom: 300px;
     }
 
     &-topic {
@@ -63,7 +69,7 @@
 
     @include responsive(tablet) {
       flex-flow: row wrap;
-      justify-content: space-between;
+      justify-content: center;
       gap: 30px;
     }
 
@@ -80,6 +86,7 @@
     gap: 20px;
     justify-content: center;
 
+@include responsive (tablet){
     &--odd {
       transform: translateY(0);
       gap: 30px;
@@ -93,6 +100,8 @@
     }
   }
 }
+}
+
 
 .services-card {
   background-color: #fff;
@@ -124,14 +133,14 @@
 
   &__text {
     @include card-description;
-    
+
     margin: 16px 0;
     line-height: 20px;
     color: $text-color;
   }
 
   &__link {
-    display: flex;
+    display: inline-flex;
     align-self: center;
     justify-content: center;
     color: #334563;
@@ -145,27 +154,25 @@
     text-decoration-skip-ink: none;
 
     &:hover {
-      color: blue;
+      color: #0056b3;
       background: rgb(199, 198, 198);
       border-radius: 6px;
       text-transform: uppercase;
     }
   }
 
-  &__services-button {
-    display: inline-flex;
+  &__button {
+     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: Poppins, sans-serif;
-    font-size: 15px;
-    color: #334563;
     padding: 12px 24px;
     border-radius: 8px;
     transition: color 0.3s, background-color 0.3s, transform 0.3s ease;
 
+
     &:hover {
       color: #fff;
-      background-color: #334563;
+      background-color: #b9b9b9;
       transform: translateY(-2px);
     }
   }
@@ -184,3 +191,4 @@
     }
   }
 }
+
