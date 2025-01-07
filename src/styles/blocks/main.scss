@@ -21,6 +21,7 @@ body {
 .container {
   height: auto;
   box-sizing: border-box;
+  width: 100%;
   max-width: 1600px;
 
   @include content-padding-inline;
